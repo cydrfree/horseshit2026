@@ -154,10 +154,10 @@
 .message-card h1,
 .message-card p {
   color: #ff0000;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .message-card p {
-  line-height: 1.8;
+  line-height: 1.6;
   word-break: keep-all;
 }
 
@@ -165,7 +165,7 @@
   background: none;
   color: #ff0000;
   text-decoration: underline;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 
 @keyframes scroll-left {
