@@ -1,15 +1,14 @@
 @font-face {
   font-family: "BookkGothic";
-  /* ▼ 저장소 이름을 포함한 전체 경로로 수정 */
-  src: url("/horseshit2026/assets/fonts/BookkGothic-Lt.woff2") format("woff2");
+  /* 경로 앞의 / 제거 */
+  src: url("assets/fonts/BookkGothic-Lt.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "ornamentslabelsandframes";
-  /* ▼ 저장소 이름을 포함한 전체 경로로 수정 */
-  src: url("/horseshit2026/assets/fonts/ornamentslabelsandframes.woff2")
-    format("woff2");
+  /* 경로 앞의 / 제거 */
+  src: url("assets/fonts/ornamentslabelsandframes.woff2") format("woff2");
 }
 
 .intro-wrapper {
@@ -89,14 +88,15 @@
 }
 
 .year-2026 {
-  width: min(90vw, 800px);
-  margin: 0 auto 60px auto;
+  width: min(90vw, 1317px);
+  aspect-ratio: 1317.03 / 330;
+  margin: 0 auto 160px auto;
   animation: glow 2s ease-in-out infinite;
 }
 .year-svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .go-message-btn,
@@ -142,15 +142,16 @@
   max-height: 100vh;
   overflow-y: auto;
 }
+
+/* 문법 오류 수정됨 */
 .message-img {
-  .message-img {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-  }
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
 }
+
 .message-card h1,
 .message-card p {
   color: #ff0000;
@@ -176,12 +177,16 @@
     transform: translateX(-50%);
   }
 }
+
+/* ★ 수정된 부분: 투명도(opacity) 추가해서 반짝거리는 효과 복구 */
 @keyframes glow {
   0%,
   100% {
+    opacity: 1;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
   }
   50% {
+    opacity: 0.4;
     filter: drop-shadow(0 0 40px rgba(255, 255, 255, 1));
   }
 }
