@@ -107,7 +107,6 @@ export default function Intro({ onComplete }: IntroProps) {
             />
             <h1>♡丙午年♡</h1>
             <p>♡ 달려나가자 ♡ 2026 붉은 말 처럼 ♡</p>
-            <br />
             <p>
               「LESSON 5」 를 아시나요? 우리는 언제나 가장 가깝고 쉬운 길을
               추구하지만, 사실 가장 가까운 길은 멀리 돌아가는 길일지도 모릅니다.
