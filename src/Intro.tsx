@@ -13,7 +13,6 @@ export default function Intro({ onComplete }: IntroProps) {
     if (audioRef.current) {
       audioRef.current.play().catch((e) => console.log("Audio play failed", e));
     }
-
     setStep("message");
   };
 
@@ -22,19 +21,19 @@ export default function Intro({ onComplete }: IntroProps) {
       className={`intro-wrapper ${step === "message" ? "message-mode" : ""}`}
     >
       <audio ref={audioRef} loop>
-        <source src="/assets/bgm.mp3" type="audio/mpeg" />
+        {/* ▼ 수정됨: 맨 앞 슬래시 제거 */}
+        <source src="assets/bgm.mp3" type="audio/mpeg" />
       </audio>
 
       <div className="intro-container">
-        {/* 배경 이미지: start 단계에서만 보임 */}
+        {/* ▼ 수정됨: 맨 앞 슬래시 제거 */}
         <div
           className="background"
           style={{ opacity: step === "start" ? 1 : 0 }}
         >
-          <img src="/assets/background.jpeg" alt="배경" />
+          <img src="assets/background.jpeg" alt="배경" />
         </div>
 
-        {/* 흐르는 텍스트 */}
         <div className="scrolling-text top">
           <div className="scroll-content">
             <p>20261948-0234781ekwnrdlfRJditlqkftgoRLemfdk</p>
@@ -48,7 +47,6 @@ export default function Intro({ onComplete }: IntroProps) {
           </div>
         </div>
 
-        {/* 시작 화면 */}
         <div
           className="start-screen"
           style={{
@@ -57,7 +55,6 @@ export default function Intro({ onComplete }: IntroProps) {
           }}
         >
           <div className="year-2026">
-            {/* SVG 코드를 그대로 사용 */}
             <svg
               className="year-svg"
               fill="none"
@@ -89,11 +86,11 @@ export default function Intro({ onComplete }: IntroProps) {
           </button>
         </div>
 
-        {/* 메시지 화면 */}
         <div className={`message-wrapper ${step === "message" ? "show" : ""}`}>
           <div className="message-card">
+            {/* ▼ 수정됨: 맨 앞 슬래시 제거 */}
             <img
-              src="/assets/horseshit.webp"
+              src="assets/horseshit.webp"
               alt="새해 이미지"
               className="message-img"
             />
@@ -109,7 +106,6 @@ export default function Intro({ onComplete }: IntroProps) {
               웅정이 올림
             </p>
 
-            {/* 갤러리입장 */}
             <button
               onClick={onComplete}
               className="back-btn"
