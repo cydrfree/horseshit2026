@@ -22,7 +22,11 @@ export default function Intro({ onComplete }: IntroProps) {
       className={`intro-wrapper ${step === "message" ? "message-mode" : ""}`}
     >
       <audio ref={audioRef} loop>
-        <source src="assets/bgm.mp3" type="audio/mpeg" />
+        {/* 수정됨: 경로 앞에 import.meta.env.BASE_URL 추가 */}
+        <source
+          src={`${import.meta.env.BASE_URL}assets/bgm.mp3`}
+          type="audio/mpeg"
+        />
       </audio>
 
       <div className="intro-container">
@@ -31,7 +35,11 @@ export default function Intro({ onComplete }: IntroProps) {
           className="background"
           style={{ opacity: step === "start" ? 1 : 0 }}
         >
-          <img src="assets/background.jpeg" alt="배경" />
+          {/* 수정됨: 경로 앞에 import.meta.env.BASE_URL 추가 */}
+          <img
+            src={`${import.meta.env.BASE_URL}assets/background.jpeg`}
+            alt="배경"
+          />
         </div>
 
         {/* 흐르는 텍스트 */}
@@ -73,7 +81,7 @@ export default function Intro({ onComplete }: IntroProps) {
                   fill="white"
                 />
                 <path
-                  d="M490.266 330C400.766 330 324.766 253.5 324.766 164.5C324.766 75.5 400.766 0 490.266 0C579.266 0 654.766 75.5 654.766 164.5C654.766 253.5 579.266 330 490.266 330ZM361.766 164.5C361.766 255.5 417.766 326 490.266 326C562.266 326 617.766 255.5 617.766 164.5C617.766 73.5 562.266 3.50001 489.766 3.50001C417.266 3.50001 361.766 73.5 361.766 164.5Z"
+                  d="M490.266 330C400.766 330 324.766 253.5 324.766 164.5C324.766 75.5 400.766 0 490.266 0C579.266 0 654.766 75.5 654.766 164.5C654.766 253.5 579.266 330 490.266 330ZM361.766 164.5C361.766 255.5 417.766 326 490.266 326C562.266 326 617.766 255.5 617.766 73.5 562.266 3.50001 489.766 3.50001C417.266 3.50001 361.766 73.5 361.766 164.5Z"
                   fill="white"
                 />
                 <path
@@ -91,8 +99,9 @@ export default function Intro({ onComplete }: IntroProps) {
         {/* 메시지 화면 */}
         <div className={`message-wrapper ${step === "message" ? "show" : ""}`}>
           <div className="message-card">
+            {/* 수정됨: 경로 앞에 import.meta.env.BASE_URL 추가 */}
             <img
-              src="assets/horseshit.webp"
+              src={`${import.meta.env.BASE_URL}assets/horseshit.webp`}
               alt="새해 이미지"
               className="message-img"
             />
